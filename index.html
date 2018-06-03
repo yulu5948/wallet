@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>壹钱包 - 集中管理您的收款地址</title>
+</head>
+
+<body>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">壹钱包</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./wallet.html" id="walleturl">我的钱包</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./usage.html">使用说明</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nva-item">
+                    <a class="nav-link">地址: <span id="userAddr"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-12 col-sm-12">
+                <h1>壹钱包</h1>
+                <p>
+                    互联网3.0时代，每个人都有很多种虚拟货币地址，他们散布在各个地方，当需要和他人交流时，找起来比较麻烦，
+                    一长串字符看起来也不直观。现在，壹钱包帮您解决这个多账户管理的痛点。
+                    一个地方，一个专属于您的唯一链接，集中管理您的货币地址，方便的呈现给别人。
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div id="tips"></div>
+
+    <div class="row row-content">
+        <div class="col">
+
+            <form>
+                <div class="form-group row">
+                    <label for="ctype" class="col-md-1 col-form-label">币种</label>
+                    <div class="col-md-1">
+                        <select class="form-control" id="ctype">
+                            <option>NAS</option>
+                            <option>BTC</option>
+                            <option>ETH</option>
+                            <option>XRP</option>
+                            <option>BCH</option>
+                            <option>EOS</option>
+                            <option>LTC</option>
+                            <option>ADA</option>
+                            <option>XLM</option>
+                            <option>MIOTA</option>
+                            <option>TRX</option>
+                            <option>NEO</option>
+                            <option>XMR</option>
+                            <option>DASH</option>
+                            <option>USDT</option>
+                            <option>XEM</option>
+                            <option>VEN</option>
+                            <option>BNB</option>
+                            <option>ETC</option>
+                            <option>QTUM</option>
+                            <option>OMG</option>
+                            <option>BCN</option>
+                            <option>ICX</option>
+                            <option>ZEC</option>
+                            <option>LSK</option>
+                            <option>ONT</option>
+                            <option>ZIL</option>
+                            <option>AE</option>
+                            <option>BTG</option>
+                            <option>DCR</option>
+                            <option>ZRX</option>
+                            <option>BTM</option>
+                            <option>STEEM</option>
+                            <option>XVG</option>
+                            <option>BTS</option>
+                            <option>NANO</option>
+                            <option>SC</option>
+                            <option>RHOC</option>
+                            <option>GNT</option>
+                            <option>WAN</option>
+                            <option>MKR</option>
+                            <option>BCD</option>
+                            <option>PPT</option>
+                            <option>BTCP</option>
+                            <option>STRAT</option>
+                            <option>REP</option>
+                            <option>WAVES</option>
+                            <option>DOGE</option>
+                            <option>IOST</option>
+                            <option>DGB</option>
+                            <option>SNT</option>
+                            <option>WTC</option>
+                            <option>HSR</option>
+                            <option>AION</option>
+                            <option>XIN</option>
+                            <option>WICC</option>
+                            <option>LRC</option>
+                            <option>BAT</option>
+                            <option>ELF</option>
+                            <option>DGD</option>
+                            <option>KMD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="caddr" class="col-md-1 col-form-label">地址</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="caddr" name="caddr"
+                               placeholder="如 n1UkzP977VGbsPth7rQqaMDnVCGUtRUzCPY">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ctag" class="col-md-1 col-form-label">标签</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="ctag" name="ctag" placeholder="如 壹钱包收款专业">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="cinfo" class="col-md-1 col-form-label">信息</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="cinfo" name="cinfo"
+                               placeholder="如 主要用来做各个地方的对外收款用">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-2 offset-md-6">
+                        <button type="submit" class="btn btn-primary" id="doAdd">添加</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p>© Copyright 2018 壹钱包 <a href="mailto:86369340@qq.com">联系作者</a> <a
+                        href="https://incentive.nebulas.io/cn/signup.html?invite=iyhSi" target="_blank">参加星云链 dapp 活动得
+                    100nas</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.blockUI.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="lib/nebPay.js"></script>
+<script src="lib/nebulas.js"></script>
+
+<script src="js/onewallet.js"></script>
+</body>
+
+</html>
