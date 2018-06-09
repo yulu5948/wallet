@@ -2,12 +2,12 @@
 
 var hasWallet = true;
 
-var dappAddr = "n1pQzpoom8cRGix3FZkEsZ6cL3PRMLBEeve";
+var dappAddr = "n1rPtMmAfZAbcXaB2SBVD44SZCYgRxRPQmG";
 var Nebulas = require("nebulas");
 var neb = new Nebulas.Neb();
 var Account = Nebulas.Account;
 
-neb.setRequest(new Nebulas.HttpRequest("https://testnet.nebulas.io"));
+neb.setRequest(new Nebulas.HttpRequest("https://mainnet.nebulas.io"));
 
 var NebPay = require("nebpay");
 var nebPay = new NebPay();
