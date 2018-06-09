@@ -145,12 +145,6 @@ $(document).ready(function () {
 
     $("#doAdd").on("click", function (event) {
         event.preventDefault();
-        $('body').block({
-            message: "正在处理，请稍后...",
-            css: {
-                border: "3px solid #ddd"
-            }
-        });
 
         var ctype = $("#ctype").val();
         var addr = $("#caddr").val();
@@ -171,6 +165,13 @@ $(document).ready(function () {
             alert("未检测到钱包插件，请先根据使用说明安装钱包插件");
             return
         }
+
+        $('body').block({
+            message: "正在处理，请稍后...",
+            css: {
+                border: "3px solid #ddd"
+            }
+        });
 
         var func = "addCoinAddr";
         var args = [ctype, addr,tag, info];
